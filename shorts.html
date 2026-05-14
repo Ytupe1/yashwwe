@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WWE Shorts</title>
+
+    <style>
+
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial;
+    padding:40px;
+}
+
+.title{
+    text-align:center;
+    color:red;
+    font-size:70px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#bbb;
+    margin-top:10px;
+    font-size:22px;
+}
+
+/* FEATURED */
+
+.featured{
+    background:#111;
+
+    margin-top:50px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:30px;
+
+    border:2px solid red;
+
+    flex-wrap:wrap;
+}
+
+.featured img{
+    width:400px;
+    border-radius:20px;
+}
+
+.featured-text{
+    flex:1;
+}
+
+.featured-text h2{
+    color:red;
+    font-size:45px;
+}
+
+.featured-text p{
+    margin-top:15px;
+    font-size:20px;
+    color:#ccc;
+}
+
+.featured-text button{
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    background:red;
+    color:white;
+
+    border:none;
+    border-radius:40px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    margin-top:70px;
+
+    text-align:center;
+
+    color:red;
+
+    font-size:50px;
+}
+
+/* CARDS */
+
+.cards{
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+}
+.watch-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:red;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.watch-btn:hover{
+
+    background:white;
+
+    color:red;
+
+    box-shadow:0 0 15px red;
+
+    transform:scale(1.05);
+}
+
+.card{
+    background:#111;
+
+    width:300px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:0 0 20px red;
+}
+
+.card img{
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px 20px 10px;
+
+    color:red;
+}
+
+.card p{
+    padding:0 20px 20px;
+
+    color:#bbb;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+    margin-top:60px;
+
+    padding:15px 35px;
+
+    background:red;
+    color:white;
+
+    border:none;
+    border-radius:40px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:block;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+</style>
+
+
+
+</head>
+
+
+    <body>
+
+    <!-- TITLE -->
+
+    <h1 class="title">
+        WWE SHORTS
+    </h1>
+
+    <p class="subtitle">
+        Best WWE Shorts & Viral Moments 🔥
+    </p>
+
+    <!-- FEATURED SHORT -->
+
+    <div class="featured">
+
+        <img src="Roman.jpg">
+
+        <div class="featured-text">
+
+            <h2>Roman Reigns Return</h2>
+
+            <p>
+                One of the coldest WWE returns ever.
+                <br>
+                Known As The Guy , Big Dog And Now He is 
+                OTC / Original Tribal Cheif (Head Of The Table).
+            </p>
+
+            <button>
+               <a href="https://youtube.com/shorts/0aZQUUrbzZY?si=hBatMOvpTEvD8C3-" target="_blank" class="watch-btn">WATCH SHORT</a> 
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SHORTS CARDS -->
+
+    <h2 class="section-title">
+        TRENDING WWE SHORTS
+    </h2>
+
+    <div class="cards">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <img src="randy.jpg">
+
+            <h3>Ortans Best RKO OutaNowhere......🔥</h3>
+
+            <p>
+                Crowd went insane 🔥
+            </p>
+            <a  href="https://www.youtube.com/@TNYashhhh" target="_blank" class="watch-btn">
+
+                   WATCH NOW
+
+</a>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="THE BEAST Brock Lesnar">
+
+            <img src="brock.jpg">
+
+            <h3>Beast Moments With Commentary Edit</h3>
+
+            <p>
+               It's Destruction When He Enters - TN Yash.
+            </p>
+<a href="https://www.youtube.com/@TNYashhhh" target="_blank" class="watch-btn">
+
+    WATCH NOW
+
+</a>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <img src="cody.jpg">
+
+            <h3>Cody Rhodes</h3>
+
+            <p>
+                Finish The Story. <br>Rise Like A Superstar .
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <a href="index.html">
+
+        <button class="back-btn">
+            BACK TO HOME
+        </button>
+
+    </a>
+
+</body>
+
+</html>

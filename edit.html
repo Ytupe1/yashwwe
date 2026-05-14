@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yash WWE Edits</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:black;
+            color:white;
+            font-family:Arial;
+            overflow-x:hidden;
+        }
+
+        /* NAVBAR */
+
+        header{
+
+            width:100%;
+
+            padding:25px 8%;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            position:fixed;
+
+            top:0;
+
+            background:rgba(0,0,0,0.7);
+
+            backdrop-filter:blur(10px);
+
+            border-bottom:2px solid red;
+
+            z-index:1000;
+        }
+
+        .logo{
+
+            color:red;
+
+            font-size:45px;
+
+            font-weight:bold;
+
+            text-shadow:0 0 15px red;
+        }
+
+        nav a{
+
+            color:white;
+
+            text-decoration:none;
+
+            margin-left:30px;
+
+            font-size:18px;
+
+            transition:0.3s;
+        }
+
+        nav a:hover{
+
+            color:red;
+        }
+
+        /* HERO */
+
+        .hero{
+
+            height:100vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+            url('romanseth.jfif');
+
+            background-size:cover;
+
+            background-position:center;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            text-align:center;
+
+            padding:20px;
+        }
+        .scroll-down{
+
+    text-align:center;
+
+    color:red;
+
+    font-size:22px;
+
+    padding:25px;
+
+    letter-spacing:3px;
+
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+        .hero-content h1{
+
+            font-size:110px;
+
+            color:red;
+
+            text-shadow:0 0 25px red;
+        }
+
+        .hero-content p{
+
+            margin-top:25px;
+
+            font-size:28px;
+
+            color:#ddd;
+
+            letter-spacing:2px;
+        }
+
+        /* INTRO */
+
+        .intro{
+
+            padding:120px 10%;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:70px;
+
+            flex-wrap:wrap;
+        }
+
+        .intro img{
+
+            width:370px;
+
+            border-radius:25px;
+
+            border:4px solid red;
+
+            box-shadow:0 0 25px red;
+        }
+
+        .intro-text{
+            flex:1;
+        }
+
+        .intro-text h1{
+
+            color:red;
+
+            font-size:70px;
+        }
+
+        .intro-text h2{
+
+            margin-top:15px;
+
+            font-size:35px;
+
+            color:white;
+        }
+
+        .intro-text p{
+
+            margin-top:30px;
+
+            color:#bbb;
+
+            font-size:21px;
+
+            line-height:1.9;
+        }
+
+        .intro-text button{
+
+            margin-top:40px;
+
+            padding:16px 40px;
+
+            background:red;
+
+            color:white;
+
+            border:none;
+
+            border-radius:40px;
+
+            font-size:18px;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        .intro-text button:hover{
+
+            transform:scale(1.05);
+
+            box-shadow:0 0 20px red;
+        }
+
+        /* TIMELINE */
+
+        .timeline{
+
+            padding:100px 10%;
+        }
+
+        .timeline h1{
+
+            text-align:center;
+
+            color:red;
+
+            font-size:70px;
+
+            margin-bottom:70px;
+        }
+
+        .timeline-box{
+
+            border-left:4px solid red;
+
+            padding-left:40px;
+
+            margin-bottom:50px;
+        }
+
+        .timeline-box h2{
+
+            color:red;
+
+            font-size:38px;
+        }
+
+        .timeline-box p{
+
+            margin-top:15px;
+
+            color:#bbb;
+
+            font-size:20px;
+
+            line-height:1.8;
+        }
+
+        /* SHOWCASE */
+
+        .showcase{
+
+            padding:100px 0;
+        }
+
+        .showcase-box{
+
+            min-height:80vh;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:60px;
+
+            padding:80px 10%;
+
+            flex-wrap:wrap;
+        }
+
+        .showcase-box img{
+
+            width:500px;
+
+            border-radius:25px;
+
+            border:3px solid red;
+        }
+
+        .showcase-text{
+            flex:1;
+        }
+
+        .showcase-text h1{
+
+            color:red;
+
+            font-size:70px;
+        }
+
+        .showcase-text p{
+
+            margin-top:25px;
+
+            color:#bbb;
+
+            line-height:1.9;
+
+            font-size:22px;
+        }
+
+        .watch-btn{
+
+            display:inline-block;
+
+            margin-top:35px;
+
+            background:red;
+
+            color:white;
+
+            text-decoration:none;
+
+            padding:16px 35px;
+
+            border-radius:40px;
+
+            font-size:18px;
+
+            transition:0.3s;
+        }
+
+        .watch-btn:hover{
+
+            background:white;
+
+            color:red;
+
+            box-shadow:0 0 20px red;
+        }
+
+        /* QUOTES */
+
+        .quotes{
+
+            padding:100px 10%;
+
+            text-align:center;
+        }
+
+        .quotes h1{
+
+            color:red;
+
+            font-size:70px;
+
+            margin-bottom:60px;
+        }
+
+        .quote{
+
+            background:#111;
+
+            padding:40px;
+
+            margin-bottom:30px;
+
+            border-left:5px solid red;
+
+            border-radius:20px;
+
+            font-size:35px;
+
+            color:white;
+
+            box-shadow:0 0 15px rgba(255,0,0,0.3);
+        }
+
+        /* FOOTER */
+
+        footer{
+
+            padding:70px 10%;
+
+            background:#111;
+
+            text-align:center;
+
+            border-top:2px solid red;
+        }
+
+        footer h1{
+
+            color:red;
+
+            font-size:55px;
+        }
+
+        footer p{
+
+            margin-top:20px;
+
+            color:#bbb;
+
+            font-size:20px;
+        }
+        .quote-line{
+
+    margin-top:25px;
+
+    color:#ddd;
+
+    font-size:24px;
+
+    font-style:italic;
+
+    letter-spacing:1px;
+}
+
+        footer a{
+
+            color:red;
+
+            text-decoration:none;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:900px){
+
+            .hero-content h1{
+                font-size:65px;
+            }
+
+            .intro img,
+            .showcase-box img{
+                width:100%;
+            }
+
+            .intro-text h1,
+            .showcase-text h1{
+                font-size:45px;
+            }
+
+            .timeline h1,
+            .quotes h1{
+                font-size:50px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="logo">
+            YASH'S WWE
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shorts.html">Shorts</a>
+
+            <a href="edit.html">Edits</a>
+            <a href="about.html">About</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>WWE CINEMATIC EDITS</h1>
+
+            <p>
+                Emotional Storytelling • Legendary WWE Aura 🔥
+            </p>
+            <h3 class="quote-line">
+    "I don't make edits... I create WWE moments."
+</h3>
+
+        </div>
+
+    </section>
+    <div class="scroll-down">
+
+    ↓ SCROLL TO ENTER WWE WORLD ↓
+
+</div>
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <img src="yashhh.jpg">
+
+        <div class="intro-text">
+
+            <h1>Yash Tupe</h1>
+
+            <h2>
+                WWE Editor & Content Creator 👀🔥
+            </h2>
+
+            <p>
+
+                I don't just make WWE edits...
+                I tell WWE stories.
+
+                From Roman Reigns aura edits to emotional
+                Cody Rhodes storytelling, my goal is to
+                create cinematic WWE content that fans
+                actually feel.
+
+            </p>
+
+            <p>
+
+                Welcome to Yash WrestleWorld —
+                where WWE passion meets creativity.
+
+            </p>
+
+            <a href="https://www.youtube.com/@TNYashhhh" target="_blank">
+
+                <button>
+                    SUBSCRIBE NOW
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- TIMELINE -->
+
+    <section class="timeline">
+
+        <h1>WWE STORYLINE ERA</h1>
+
+        <div class="timeline-box">
+
+            <h2>2012 — The Shield Begins</h2>
+
+            <p>
+                Roman Reigns, Seth Rollins and Dean Ambrose
+                changed WWE forever.
+            </p>
+
+        </div>
+
+        <div class="timeline-box">
+
+            <h2>2020 — Tribal Chief Era</h2>
+
+            <p>
+                Roman Reigns became one of the greatest WWE
+                characters of all time.
+            </p>
+
+        </div>
+
+        <div class="timeline-box">
+
+            <h2>2024 — Finish The Story</h2>
+
+            <p>
+                Cody Rhodes finally finished his legendary journey.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SHOWCASE -->
+
+    <section class="showcase">
+
+        <div class="showcase-box">
+
+            <img src="romanedit.jfif">
+
+            <div class="showcase-text">
+
+                <h1>ROMAN REIGNS AURA</h1>
+
+                <p>
+
+                    Cinematic WWE edit inspired by
+                    the Tribal Chief storyline and Bloodline era.
+
+                </p>
+
+                <a href="https://www.youtube.com/@TNYashhhh" target="_blank" class="watch-btn">
+
+                    WATCH EDIT
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="showcase-box">
+
+            <img src="shieldedit.jfif">
+
+            <div class="showcase-text">
+
+                <h1>The Hounds Of Justice</h1>
+
+                <p>
+
+                   <p>
+
+                  A cinematic Shield edit showcasing the rise of
+                 Roman Reigns, Seth Rollins and Dean Ambrose —
+                 the brotherhood that changed WWE forever.
+
+                 From destruction to betrayal, this edit captures
+                one of the greatest factions in WWE history with
+                emotional storytelling and powerful aura moments.
+
+</p>
+                </p>
+
+                <a href="https://www.youtube.com/@TNYashhhh" target="_blank" class="watch-btn">
+
+                    WATCH EDIT
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- QUOTES -->
+
+    <section class="quotes">
+
+        <h1>ICONIC WWE QUOTES</h1>
+
+        <div class="quote">
+            "Acknowledge Me."
+        </div>
+
+        <div class="quote">
+            "Finish The Story."
+        </div>
+
+        <div class="quote">
+            "Never Give Up."
+        </div>
+        <div class="quote">
+            "The Shield Wasn't Build To Follow......
+              it Was Build To Dominate"
+        </div>
+        <div class="quote">
+            "Every WWE Moments Tells A Story......
+             Legends make It unforgattable"
+        </div>
+
+    </section>
+    
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h1>YASH WRESTLEWORLD</h1>
+
+        <p>
+
+            WWE Editor • Storytelling Creator • WWE Fan Community 🔥
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            YouTube:
+            <a href="https://www.youtube.com/@TNYashhhh" target="_blank">
+
+                @TNYashhhh
+
+            </a>
+
+        </p>
+
+        <p style="margin-top:15px;">
+
+            Instagram:
+            <a href="https://www.instagram.com/yashtupe_96k/" target="_blank">
+
+                @yashtupe_96k
+
+            </a>
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

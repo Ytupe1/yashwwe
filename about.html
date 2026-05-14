@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Yash WWE</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:black;
+            color:white;
+            font-family:Arial;
+            overflow-x:hidden;
+        }
+
+        /* NAVBAR */
+
+        header{
+
+            width:100%;
+
+            padding:25px 8%;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            background:#111;
+
+            border-bottom:2px solid red;
+
+            position:sticky;
+
+            top:0;
+
+            z-index:1000;
+        }
+
+        .logo{
+
+            color:red;
+
+            font-size:42px;
+
+            font-weight:bold;
+
+            text-shadow:0 0 15px red;
+        }
+
+        nav a{
+
+            color:white;
+
+            text-decoration:none;
+
+            margin-left:25px;
+
+            font-size:18px;
+
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:red;
+        }
+
+        /* HERO */
+
+        .hero{
+
+            height:90vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+            url('aboutbg.jpg');
+
+            background-size:cover;
+
+            background-position:center;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            text-align:center;
+
+            padding:20px;
+        }
+
+        .hero h1{
+
+            color:red;
+
+            font-size:100px;
+
+            text-shadow:0 0 25px red;
+        }
+
+        .hero p{
+
+            margin-top:25px;
+
+            color:#ddd;
+
+            font-size:28px;
+        }
+
+        /* ABOUT */
+
+        .about{
+
+            padding:120px 10%;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            gap:70px;
+
+            flex-wrap:wrap;
+        }
+
+        .about img{
+
+            width:370px;
+
+            border-radius:25px;
+
+            border:4px solid red;
+
+            box-shadow:0 0 25px red;
+        }
+
+        .about-text{
+            flex:1;
+        }
+
+        .about-text h1{
+
+            color:red;
+
+            font-size:65px;
+        }
+
+        .about-text p{
+
+            margin-top:25px;
+
+            color:#bbb;
+
+            line-height:2;
+
+            font-size:21px;
+        }
+
+        /* JOURNEY */
+
+        .journey{
+
+            padding:100px 10%;
+        }
+
+        .journey h1{
+
+            text-align:center;
+
+            color:red;
+
+            font-size:70px;
+
+            margin-bottom:60px;
+        }
+
+        .journey-box{
+
+            background:#111;
+
+            padding:40px;
+
+            margin-bottom:30px;
+
+            border-left:5px solid red;
+
+            border-radius:20px;
+        }
+
+        .journey-box h2{
+
+            color:red;
+
+            margin-bottom:15px;
+
+            font-size:35px;
+        }
+
+        .journey-box p{
+
+            color:#ccc;
+
+            line-height:1.9;
+
+            font-size:19px;
+        }
+
+        /* FAVORITES */
+
+        .favorites{
+
+            padding:100px 10%;
+        }
+
+        .favorites h1{
+
+            text-align:center;
+
+            color:red;
+
+            font-size:70px;
+
+            margin-bottom:60px;
+        }
+
+        .fav-container{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:40px;
+
+            flex-wrap:wrap;
+        }
+
+        .fav-card{
+
+            width:320px;
+
+            background:#111;
+
+            border-radius:25px;
+
+            overflow:hidden;
+
+            transition:0.4s;
+        }
+
+        .fav-card:hover{
+
+            transform:translateY(-10px);
+
+            box-shadow:0 0 25px red;
+        }
+
+        .fav-card img{
+
+            width:100%;
+
+            height:350px;
+
+            object-fit:cover;
+        }
+
+        .fav-card h2{
+
+            color:red;
+
+            padding:20px;
+        }
+
+        .fav-card p{
+
+            padding:0 20px 25px;
+
+            color:#bbb;
+
+            line-height:1.8;
+        }
+
+        /* SOCIALS */
+
+        .socials{
+
+            padding:100px 10%;
+
+            text-align:center;
+        }
+
+        .socials h1{
+
+            color:red;
+
+            font-size:70px;
+
+            margin-bottom:40px;
+        }
+
+        .socials a{
+
+            display:inline-block;
+
+            margin:20px;
+
+            padding:18px 40px;
+
+            background:red;
+
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:40px;
+
+            font-size:20px;
+
+            transition:0.3s;
+        }
+
+        .socials a:hover{
+
+            transform:scale(1.05);
+
+            box-shadow:0 0 20px red;
+        }
+
+        /* FOOTER */
+
+        footer{
+
+            background:#111;
+
+            padding:60px;
+
+            text-align:center;
+
+            border-top:2px solid red;
+        }
+
+        footer p{
+            color:#aaa;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:900px){
+
+            .hero h1{
+                font-size:60px;
+            }
+
+            .about img{
+                width:100%;
+            }
+
+            .about-text h1{
+                font-size:45px;
+            }
+
+
+        }
+        /* BACKGROUND GLOW */
+
+.bg-glow{
+
+    position:fixed;
+
+    width:500px;
+
+    height:500px;
+
+    background:red;
+
+    border-radius:50%;
+
+    filter:blur(170px);
+
+    opacity:0.13;
+
+    top:15%;
+
+    left:-10%;
+
+    z-index:-1;
+
+    animation:moveGlow 8s infinite alternate;
+}
+
+@keyframes moveGlow{
+
+    from{
+
+        transform:translateX(0px)
+                   translateY(0px);
+    }
+
+    to{
+
+        transform:translateX(250px)
+                   translateY(150px);
+    }
+
+}
+
+    </style>
+
+</head>
+
+<body>
+<div class="bg-glow"></div>
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="logo">
+            YASH WWE
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shorts.html">Shorts</a>
+
+            <a href="edit.html">Edits</a>
+
+            <a href="about.html">About</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>ABOUT YASH WWE</h1>
+
+            <p>
+                Passion • Creativity • WWE Storytelling 🔥
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <img src="yash.jpg">
+
+        <div class="about-text">
+
+            <h1>Yash Tupe 👀🔥</h1>
+
+            <p>
+
+                I am a WWE content creator and editor passionate
+                about cinematic storytelling, emotional edits
+                and legendary WWE moments.
+
+                From Roman Reigns aura edits to Shield nostalgia,
+                my goal is to create content that real WWE fans
+                can connect with.
+
+            </p>
+
+            <p>
+
+                Yash WrestleWorld is more than a website —
+                it's a WWE universe built for fans who love
+                edits, shorts, iconic rivalries and unforgettable moments.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- JOURNEY -->
+
+    <section class="journey">
+
+        <h1>MY WWE JOURNEY</h1>
+
+        <div class="journey-box">
+
+            <h2>Starting WWE Content</h2>
+
+            <p>
+
+                I started creating WWE edits and shorts because
+                of my passion for WWE storytelling and legendary superstars.
+
+            </p>
+
+        </div>
+
+        <div class="journey-box">
+
+            <h2>Building My Community</h2>
+
+            <p>
+
+                Through YouTube and Instagram, I continue building
+                a WWE fan community with edits, shorts and creative videos.
+
+            </p>
+
+        </div>
+
+        <div class="journey-box">
+
+            <h2>The Future</h2>
+
+            <p>
+
+                My goal is to grow Yash WrestleWorld into a bigger
+                WWE creator brand and inspire fans through creativity.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FAVORITES -->
+
+    <section class="favorites">
+
+        <h1>MY FAVORITE WWE SUPERSTARS</h1>
+
+        <div class="fav-container">
+
+            <div class="fav-card">
+
+                <img src="roman.jpg">
+
+                <h2>Roman Reigns</h2>
+
+                <p>
+                    The Tribal Chief and one of WWE's greatest modern stars.
+                </p>
+
+            </div>
+            <div class="fav-card">
+
+    <img src="seth.png">
+
+    <h2>Seth Rollins</h2>
+
+    <p>
+        Visionary. Revolutionary. One of WWE's most creative
+        and unpredictable superstars of all time.
+    </p>
+
+</div>
+
+<div class="fav-card">
+
+    <img src="dean.jfif">
+
+    <h2>Dean Ambrose</h2>
+
+    <p>
+        Chaotic, fearless and unforgettable —
+        Dean Ambrose brought madness and intensity to WWE.
+    </p>
+
+</div>
+<div class="fav-card">
+
+    <img src="aj.jfif">
+
+    <h2>AJ Styles</h2>
+
+    <p>
+        The Phenomenal One whose in-ring talent and legendary
+        matches earned respect across the wrestling world.
+    </p>
+
+</div>
+            <div class="fav-card">
+
+                <img src="Randy Orton.jfif">
+
+                <h2>Randy Orton</h2>
+
+                <p>
+                    Legendary aura, RKO moments and unforgettable WWE legacy.
+                </p>
+
+            </div>
+
+            <div class="fav-card">
+
+                <img src="undertaker.jpg">
+
+                <h2>The Undertaker</h2>
+
+                <p>
+                    The Deadman who created one of the greatest WWE careers ever.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SOCIALS -->
+
+    <section class="socials">
+
+        <h1>JOIN MY WWE WORLD</h1>
+
+        <a href="https://www.youtube.com/@TNYashhhh" target="_blank">
+
+            YouTube Channel
+
+        </a>
+
+        <a href="https://www.instagram.com/yashtupe_96k/" target="_blank">
+
+            Instagram
+
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Made By Yash Tupe • Yash WrestleWorld 🔥
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
